@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-main: #F8F7F4;
+  --color-primary: #7B8FA8;
+  --color-accent: #E9B5A0;
+  --color-text-main: #2C2F36;
+  --color-text-sub: #6B6F78;
+  --color-border: #EDEFF2;
+  
+  --radius-card: 20px;
+  --radius-btn: 40px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-main font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300;
+  }
+  .card:active {
+    @apply scale-[0.98];
+  }
+  .btn-primary {
+    @apply bg-primary text-white rounded-[40px] px-6 py-3 font-medium transition-all active:scale-95 shadow-lg shadow-primary/20;
+  }
+  .btn-outline {
+    @apply border border-primary text-primary rounded-[40px] px-6 py-3 font-medium transition-all active:scale-95;
+  }
+  .nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-text-sub transition-colors;
+  }
+  .nav-item.active {
+    @apply text-primary;
+  }
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(-100vh); opacity: 0.3; }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #E9B5A0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-up 5s linear infinite;
+}
+
+@keyframes bounce-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.animate-bounce-heart {
+  animation: bounce-heart 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Custom Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@theme {
+  --color-bg-main: #F8F7F4;
+  --color-primary: #7B8FA8;
+  --color-accent: #E9B5A0;
+  --color-text-main: #2C2F36;
+  --color-text-sub: #6B6F78;
+  --color-border: #EDEFF2;
+  
+  --radius-card: 20px;
+  --radius-btn: 40px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-main font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300;
+  }
+  .card:active {
+    @apply scale-[0.98];
+  }
+  .btn-primary {
+    @apply bg-primary text-white rounded-[40px] px-6 py-3 font-medium transition-all active:scale-95 shadow-lg shadow-primary/20;
+  }
+  .btn-outline {
+    @apply border border-primary text-primary rounded-[40px] px-6 py-3 font-medium transition-all active:scale-95;
+  }
+  .nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-text-sub transition-colors;
+  }
+  .nav-item.active {
+    @apply text-primary;
+  }
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(-100vh); opacity: 0.3; }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #E9B5A0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-up 5s linear infinite;
+}
+
+@keyframes bounce-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.animate-bounce-heart {
+  animation: bounce-heart 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Custom Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
